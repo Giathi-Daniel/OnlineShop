@@ -1,0 +1,103 @@
+body{
+    display: block;
+    background: #fff;
+}
+.form{
+    inline-size: 100%;
+    padding: 10px 10vw;
+    margin-block-start: -7%;
+}
+.heading{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 30px;
+    /* margin-block-end: 20px; */
+}
+
+.form input{
+    background: #ebe0e0 !important;
+    inline-size: 100% !important;
+}
+input:not(.search-box, .checkbox, .size-checkbox, input[type="file"]){
+    display: block;
+    inline-size: 300px;
+    block-size: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #eee;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+}
+.three-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+.three-input-container input{
+    margin: 0 !important;
+}
+#state{
+    margin: 0 20px !important;
+}
+.cart-section{
+    inline-size: 100%;
+    padding: 20px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+.product-list{
+    inline-size: 70%;
+}
+.checkout-section{
+    margin-top: 85px;
+    /* margin-block-start: 76px; */
+    inline-size: 28%;
+}
+.section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+.cart{
+    inline-size: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ff7800;
+    margin-block-end: 60px;
+}
+.checkout-box{
+    inline-size: 100%;
+    block-size: 220px;
+    border-radius: 2px;
+    border: 1px solid #ff7800;
+    padding: 20px;
+}
+.text{
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.checkout-btn, .place-order-btn{
+    display: block;
+    inline-size: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    block-size: 40px;
+    border-radius: 5px;
+    background: #ff7800;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .1s ease;
+}
+.checkout-btn:hover{
+    background: #e8740f;
+}
+.bill{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 10px 0;
+}

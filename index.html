@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWESOME PIZZZA</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+
+    <!-- header section starts -->
+    <nav class="navbar"></nav>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+    <section class="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background: url(images/slider-1.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>the <span>tastiest</span> pizza <br> on the planet</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" style="background: url(images/slider-2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>the <span>tastiest</span> pizza <br> on the planet</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" style="background: url(images/slider-3.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>the <span>tastiest</span> pizza <br> on the planet</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+
+    <!-- banner section starts -->
+    <section class="banner">
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="images/banner-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>pizza</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/banner-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>dessert</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/banner-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>dessert</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/banner-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>pasta</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/banner-4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>wines</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/banner-4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>wines</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner section ends -->
+
+
+    <!-- steps section starts -->
+    <section class="steps">
+        <h1 class="title">how it <span>works</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/work-1.gif" alt="">
+                <h3>choose your favorite food</h3>
+            </div>
+            <div class="box">
+                <img src="images/work-2.gif" alt="">
+                <h3>free and fast delivery</h3>
+            </div>
+            <div class="box">
+                <img src="images/work-3.gif" alt="">
+                <h3>easy payments methods</h3>
+            </div>
+            <div class="box">
+                <img src="images/work-4.gif" alt="">
+                <h3>and finally, enjoy your food</h3>
+            </div>
+        </div>
+    </section>
+    <!-- steps section ends -->
+
+    <section id="italian-pizza"></section>
+
+    <!-- pizza menu section starts -->
+    <section class="shop pizzas">
+        <h1 class="title">pizzas of the <span>month</span></h1>
+        <div class="box-container" id="box-container">
+            <!-- Items displayed here -->
+        </div>
+
+    </section>
+    <!-- pizza menu section ends -->
+
+    <section id="italian-pizza-2"></section>
+
+
+    <!-- footer section starts -->
+    <section class="footer"></section>
+    <!-- footer section ends -->
+
+
+
+    <!-- swiper cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js link -->
+    <script src="./JS/nav.js"></script>
+    <script src="./JS/footer.js"></script>
+    <script src="./JS/script.js"></script>
+
+    <script>
+        /*
+        */
+       let products=[
+        {
+            id:0,
+            title:'margarita',
+            image_url:'images/pizza-3.png',
+            description:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione`,
+            discount_price:2000,
+            original_price:2500
+        },
+        {
+            id:1,
+            title:'margarita',
+            image_url:'images/pizza-2.png',
+            description:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione`,
+            discount_price:3100,
+            original_price:3500
+        },
+        {
+            id:2,
+            title:'margarita',
+            image_url:'images/pizza-1.png',
+            description:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione`,
+            discount_price:1500,
+            original_price:2000
+        }
+       ]
+       const box_container=document.querySelector('#box-container')
+       products.forEach((product,index)=>{
+            let i=`
+                <div class="box shop-item" id='${index}'>
+                    <img src="${product.image_url}" class="shop-item-image">
+                    <h3 class="shop-item-title">${product.title}</h3>
+                    <p>${product.description}</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price shop-item-price">Ksh. ${product.discount_price} <span>Ksh. ${product.original_price}</span></div>
+                    ${user_details?`<button class="btn shop-item-button add-to-cart" value='${JSON.stringify(product)}'>Add to Cart</button>`:''}
+                </div>
+                `;
+                box_container.innerHTML+=i
+        })
+        const add_to_cart_btn = document.querySelectorAll('.add-to-cart')
+        add_to_cart_btn.forEach((btn)=>{
+            btn.addEventListener('click',(e)=>{
+                if(!localStorage.getItem(`item-${JSON.parse(e.target.value).id}`)){
+                    let ids=localStorage.getItem('ids')?JSON.parse(localStorage.getItem('ids')):[]
+                    ids.push(JSON.parse(e.target.value).id)
+                    localStorage.setItem(`item-${JSON.parse(e.target.value).id}`,e.target.value)
+                    localStorage.setItem('ids',JSON.stringify(ids))
+                    alert('Item added to cart')
+                }else{
+                    alert('This item is already in cart\nCannot add an exiting item!!')
+                }
+            })
+        })
+
+        getProducts('Italian Pizza').then(data => createProductSlider(data, '#italian-pizza-2', 'Italian Pizza'))
+    </script>
+
+</body>
+</html>

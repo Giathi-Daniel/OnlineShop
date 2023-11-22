@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWESOME PIZZZA</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+<body>
+    
+    <!-- header section starts -->
+    <nav class="navbar"></nav>
+    <!-- header section ends -->
+
+    <section class="search-results">
+        <h2 class="heading">Search results for <span id="search-key"></span></h2>
+        <section class="card-container"></section>
+    </section>
+
+    <!-- footer section starts -->
+    <section class="footer"></section>
+    <!-- footer section ends -->
+
+    <!-- swiper cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js link -->
+    <script src="./JS/nav.js"></script>
+    <script src="./JS/footer.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/search.js"></script>
+
+    <script>
+        getProducts('Italian Pizza').then(data => createProductSlider(data, '#italian-pizza-2', 'Italian Pizza'))
+    </script>
+
+</body>
+</html>

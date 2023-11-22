@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWESOME PIZZA : CREATE ACCOUNT</title>
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- FACEBOOK LOGIN  -->
+    <script src="./JS/facebook.js" defer type="module"></script>
+
+    <!-- TWITTER LOGIN  -->
+    <script src="./JS/twitter.js" defer type="module"></script>
+
+    <!-- TWITTER LOGIN  -->
+    <script src="./JS/google.js" defer type="module"></script>
+
+    <script src="./JS/signup.js" defer type="module"></script>
+
+    <!-- Template css -->
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+
+    <div class="container" id="container">
+        <!-- sign up -->
+        <div class="form-container sign-in">
+            <form>
+                <h2>Create Account</h2>
+                 <div class="social-icons">
+                    <a class="icon googleLogin">
+                        <i class='bx bxl-google-plus'></i>
+                    </a>
+                    <a class="icon facebookLogin">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a class="icon twitterLogin">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+                <span>or use email for registration</span>
+                <input type="text" id="name" placeholder="Enter Surname" required>
+                <input type="email" id="email" placeholder="Enter email" required>
+                <input type="password" id="password" placeholder="password" required>
+                <button class="submit-btn" id="register">Sign up</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome back!</h1>
+                    <p>Enter your personal details here</p>
+                    <a href="./login.html" style="inline-size: 100%; font-size: 1rem;">
+                     <button class="hidden" id="login">Sign In</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
