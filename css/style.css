@@ -908,6 +908,34 @@ section{
     padding: 10px;
     margin-block-start: -10px;
   }
+  .nav {
+    display: inline;
+    padding: 10px;
+  }
+  .nav-items {
+    inline-size: 100%;
+    margin: 10px;
+    flex-direction: row;
+  }
+  .nav-items a img {
+    margin-inline-start: 1px;
+    padding: 2px;
+  }
+  .search {
+    inline-size: 70%;
+  }
+  .search-btn {
+    padding: 10px 5px;
+  }
+  .links-container {
+    overflow: hidden;
+    padding-inline-start: 1px;
+    inline-size: 100%;
+  }
+  .links-container .link-item{
+    position: relative;
+    margin: 5px;
+  }
 }
 
 @media(max-width:768px){
