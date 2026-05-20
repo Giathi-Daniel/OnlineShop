@@ -10,14 +10,13 @@ const createFooter = () => {
             <div class="box">
                 <h3>contact us</h3>
                 <p>+254-700-111-000</p>
-                <a href="#" class="link">pizzashop@gmail.com</a>
+                <p>pizzaonline@gmail.com</p>
             </div>
             <div class="box">
                 <h3>localization</h3>
                 <p>112 Main Street</p>
             </div>
-        </div>
-        <div class="credit">all rights reserved!</div>`;
+        </div>`;
 }
 
 createFooter();
