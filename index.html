@@ -161,73 +161,7 @@
     <script src="./JS/nav.js"></script>
     <script src="./JS/footer.js"></script>
     <script src="./JS/script.js"></script>
-
-    <script>
-        /*
-        */
-       let products=[
-        {
-            id:0,
-            title:'margarita',
-            image_url:'images/pizza-3.png',
-            description:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione`,
-            discount_price:2000,
-            original_price:2500
-        },
-        {
-            id:1,
-            title:'margarita',
-            image_url:'images/pizza-2.png',
-            description:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione`,
-            discount_price:3100,
-            original_price:3500
-        },
-        {
-            id:2,
-            title:'margarita',
-            image_url:'images/pizza-1.png',
-            description:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione`,
-            discount_price:1500,
-            original_price:2000
-        }
-       ]
-       const box_container=document.querySelector('#box-container')
-       products.forEach((product,index)=>{
-            let i=`
-                <div class="box shop-item" id='${index}'>
-                    <img src="${product.image_url}" class="shop-item-image">
-                    <h3 class="shop-item-title">${product.title}</h3>
-                    <p>${product.description}</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price shop-item-price">Ksh. ${product.discount_price} <span>Ksh. ${product.original_price}</span></div>
-                    ${user_details?`<button class="btn shop-item-button add-to-cart" value='${JSON.stringify(product)}'>Add to Cart</button>`:''}
-                </div>
-                `;
-                box_container.innerHTML+=i
-        })
-        const add_to_cart_btn = document.querySelectorAll('.add-to-cart')
-        add_to_cart_btn.forEach((btn)=>{
-            btn.addEventListener('click',(e)=>{
-                if(!localStorage.getItem(`item-${JSON.parse(e.target.value).id}`)){
-                    let ids=localStorage.getItem('ids')?JSON.parse(localStorage.getItem('ids')):[]
-                    ids.push(JSON.parse(e.target.value).id)
-                    localStorage.setItem(`item-${JSON.parse(e.target.value).id}`,e.target.value)
-                    localStorage.setItem('ids',JSON.stringify(ids))
-                    alert('Item added to cart')
-                }else{
-                    alert('This item is already in cart\nCannot add an exiting item!!')
-                }
-            })
-        })
-
-        getProducts('Italian Pizza').then(data => createProductSlider(data, '#italian-pizza-2', 'Italian Pizza'))
-    </script>
+    <script src="./JS/products.js" type="module"></script>
 
 </body>
 </html>

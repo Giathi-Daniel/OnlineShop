@@ -1,0 +1,16 @@
+# Local Firebase web config used by the browser at deploy time.
+JS/env.js
+
+# Local dotenv files. Keep only .env.example in Git.
+.env
+.env.local
+.env.*.local
+
+# Firebase local deploy cache.
+.firebase/
+
+# Dependencies and logs.
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

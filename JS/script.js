@@ -1,52 +1,58 @@
-var swiper = new Swiper('.home-slider', {
-  autoplay:{
-    delay:7500,
-    disableOnInteraction:false,
-  },
-  grabCursor:true,
-  loop: true,
-  centeredSlides:true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+if (document.querySelector('.home-slider')) {
+  var swiper = new Swiper('.home-slider', {
+    autoplay:{
+      delay:7500,
+      disableOnInteraction:false,
+    },
+    grabCursor:true,
+    loop: true,
+    centeredSlides:true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
 
 
-var swiper = new Swiper(".menu-slider", {
-  grabCursor:true,
-  loop: true,
-  autoHeight:true,
-  centeredSlides:true,
-  spaceBetwwen:20,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable:true,
-  },
-});
+if (document.querySelector('.menu-slider')) {
+  var swiper = new Swiper(".menu-slider", {
+    grabCursor:true,
+    loop: true,
+    autoHeight:true,
+    centeredSlides:true,
+    spaceBetwwen:20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+  });
+}
   
   let previewContainer = document.querySelector('.menu-preview-container');
-  let previewBox = previewContainer.querySelectorAll('.menu-preview');
+  let previewBox = previewContainer ? previewContainer.querySelectorAll('.menu-preview') : [];
   
-  document.querySelectorAll('.menu .box').forEach(menu =>{
-    menu.onclick = () =>{
-      previewContainer.style.display = 'flex';
-      let name = menu.getAttribute('data-name');
-      previewBox.forEach(preview =>{
-        let target = preview.getAttribute('data-target');
-        if(name == target){
-          preview.classList.add('active');
-        }
+  if (previewContainer) {
+    document.querySelectorAll('.menu .box').forEach(menu =>{
+      menu.onclick = () =>{
+        previewContainer.style.display = 'flex';
+        let name = menu.getAttribute('data-name');
+        previewBox.forEach(preview =>{
+          let target = preview.getAttribute('data-target');
+          if(name == target){
+            preview.classList.add('active');
+          }
+        });
+      };
+    });
+  
+    previewContainer.querySelector('#close').onclick = () =>{
+      previewContainer.style.display = 'none';
+      previewBox.forEach(close =>{
+        close.classList.remove('active');
       });
     };
-  });
-  
-  previewContainer.querySelector('#close').onclick = () =>{
-    previewContainer.style.display = 'none';
-    previewBox.forEach(close =>{
-      close.classList.remove('active');
-    });
-  };
+  }
   
   const setupSlidingEffect = () => {
       const productContainers = [...document.querySelectorAll('.product-container')];
